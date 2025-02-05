@@ -34,7 +34,29 @@ h1 {
   color: #555;
   margin-bottom: 2rem;
 }
+/* Ensure the container doesn't overflow on small screens */
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 1rem;
+}
 
+/* Make buttons and inputs easier to tap on mobile */
+button, input {
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+}
+
+/* Adjust countdown layout for small screens */
+#countdown {
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.countdown-item {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
 /* Countdown Section */
 .countdown-section {
   margin-bottom: 2rem;
