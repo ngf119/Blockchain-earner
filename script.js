@@ -24,6 +24,29 @@ function updateCountdown() {
 
 const countdownInterval = setInterval(updateCountdown, 1000);
 
+// Contract Address Popup
+const caButton = document.getElementById('ca-button');
+const caPopup = document.getElementById('ca-popup');
+const caText = document.getElementById('ca-text');
+const copyButton = document.getElementById('copy-ca');
+
+caButton.addEventListener('click', () => {
+  caPopup.style.display = 'block';
+});
+
+copyButton.addEventListener('click', () => {
+  navigator.clipboard.writeText(caText.innerText).then(() => {
+    alert('Contract address copied to clipboard!');
+  });
+});
+
+// Close popup when clicking outside
+document.addEventListener('click', (e) => {
+  if (!caButton.contains(e.target) && !caPopup.contains(e.target)) {
+    caPopup.style.display = 'none';
+  }
+});
+
 // Airdrop Form Submission
 document.getElementById('airdrop-form').addEventListener('submit', (e) => {
   e.preventDefault();
