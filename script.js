@@ -1,6 +1,13 @@
-// Set the countdown to 6 days from today
-const countdownDate = new Date();
-countdownDate.setDate(countdownDate.getDate() + 6);
+// Set the countdown to 6 days from the first visit
+let countdownDate = localStorage.getItem('countdownDate');
+
+if (!countdownDate) {
+  countdownDate = new Date();
+  countdownDate.setDate(countdownDate.getDate() + 6);
+  localStorage.setItem('countdownDate', countdownDate);
+} else {
+  countdownDate = new Date(countdownDate);
+}
 
 function updateCountdown() {
   const now = new Date();
