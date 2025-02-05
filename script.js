@@ -1,23 +1,24 @@
-// Countdown Timer (existing code)
-const launchDate = new Date(2024, 1, 1, 12, 0, 0);
+// Set the countdown to 6 days from today
+const countdownDate = new Date();
+countdownDate.setDate(countdownDate.getDate() + 6);
 
 function updateCountdown() {
   const now = new Date();
-  const timeLeft = launchDate - now;
+  const timeLeft = countdownDate - now;
 
   const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
   const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-  document.getElementById('days').innerText = days;
-  document.getElementById('hours').innerText = hours;
-  document.getElementById('minutes').innerText = minutes;
-  document.getElementById('seconds').innerText = seconds;
+  document.getElementById('days').innerText = String(days).padStart(2, '0');
+  document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+  document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+  document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
 
   if (timeLeft < 0) {
     clearInterval(countdownInterval);
-    document.getElementById('countdown').innerText = "We're Live!";
+    document.getElementById('countdown').innerHTML = "<p>We're Live! 🎉</p>";
   }
 }
 
