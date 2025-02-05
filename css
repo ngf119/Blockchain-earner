@@ -1,0 +1,39 @@
+.airdrop-section, .staking-section {
+  margin-bottom: 2rem;
+}
+
+.airdrop-section h2, .staking-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.airdrop-section p, .staking-section p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+#airdrop-form {
+  margin-bottom: 1rem;
+}
+
+#airdrop-form input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  margin-right: 0.5rem;
+}
+
+#airdrop-form button, #learn-staking {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#airdrop-form button:hover, #learn-staking:hover {
+  background: #0056b3;
+}
