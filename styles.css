@@ -1,14 +1,86 @@
-.airdrop-section, .staking-section {
+/* General Styles */
+body {
+  font-family: 'Comic Neue', cursive;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+}
+
+h1 {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 3.5rem;
+  color: #ff6f61;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 0 #fff;
+}
+
+.tagline {
+  font-size: 1.5rem;
+  color: #555;
   margin-bottom: 2rem;
 }
 
-.airdrop-section h2, .staking-section h2 {
+/* Countdown Section */
+.countdown-section {
+  margin-bottom: 2rem;
+}
+
+#countdown {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.countdown-item {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex: 1;
+}
+
+.countdown-item span {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff6f61;
+}
+
+.countdown-label {
+  font-size: 1rem;
+  color: #777;
+}
+
+/* Airdrop Section */
+.airdrop-section {
+  margin-bottom: 2rem;
+}
+
+.airdrop-section h2 {
   font-size: 1.8rem;
+  color: #ff6f61;
   margin-bottom: 0.5rem;
 }
 
-.airdrop-section p, .staking-section p {
+.airdrop-section p {
   font-size: 1.1rem;
+  color: #555;
   margin-bottom: 1rem;
 }
 
@@ -19,21 +91,36 @@
 #airdrop-form input {
   padding: 0.5rem;
   font-size: 1rem;
-  border: none;
+  border: 2px solid #ff6f61;
   border-radius: 5px;
   margin-right: 0.5rem;
 }
 
-#airdrop-form button, #learn-staking {
+#airdrop-form button {
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  background: #007bff;
+  background: #ff6f61;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
-#airdrop-form button:hover, #learn-staking:hover {
-  background: #0056b3;
+#airdrop-form button:hover {
+  background: #ff3b2f;
 }
+
+/* Staking Section */
+.staking-section {
+  margin-bottom: 2rem;
+}
+
+.staking-section h2 {
+  font-size: 1.8rem;
+  color: #ff6f61;
+  margin-bottom: 0.5rem;
+}
+
+.staking-section p {
+  font-size: 1.
