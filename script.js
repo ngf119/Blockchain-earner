@@ -1,4 +1,4 @@
-// Set the countdown to 6 days from the first visit
+// Persistent Countdown
 let countdownDate = localStorage.getItem('countdownDate');
 
 if (!countdownDate) {
